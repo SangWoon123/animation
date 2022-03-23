@@ -1,0 +1,78 @@
+body {
+  background-color: #6bbcbe;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75px;
+  height: 100px;
+}
+
+.hole,
+.bar {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+  color: transparent;
+}
+
+.hole div {
+  width: 10px;
+  height: 10px;
+  background-color: aliceblue;
+  border-radius: 25px;
+  margin: 0 3px;
+}
+
+.hole {
+  animation: RotateAni 1s ease-in-out infinite;
+}
+
+@keyframes RotateAni {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(180deg);
+  }
+}
+
+.bar div {
+  background-color: aliceblue;
+  width: 15px;
+  height: 70px;
+  margin: 0 3px;
+  animation: upAndDown 1s ease-in-out infinite;
+}
+
+.bar div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.bar div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.bar div:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.bar div:last-child {
+  animation-delay: 0.4s;
+}
+
+@keyframes upAndDown {
+  0% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(2);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
